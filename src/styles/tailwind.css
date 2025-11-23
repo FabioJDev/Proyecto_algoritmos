@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-text-main font-sans;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  a {
+    @apply text-primary no-underline transition-all duration-300;
+  }
+
+  a:hover {
+    @apply text-secondary;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism effect */
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/5 border border-white/10 shadow-xl;
+  }
+
+  .glass {
+    @apply glass-card;
+  }
+
+  /* Modern card */
+  .card {
+    @apply bg-card rounded-2xl p-6 shadow-strong border border-white/5;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 20px 60px rgba(79, 110, 247, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .cta-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary text-white;
+  }
+
+  /* Gradient button */
+  .btn {
+    @apply cta-gradient font-semibold px-6 py-3 rounded-xl cursor-pointer border-none shadow-md hover:scale-[1.02] transition-transform;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 25px rgba(79, 110, 247, 0.5);
+  }
+
+  .btn:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn.secondary {
+    background: linear-gradient(135deg, #253565 0%, #2c3e75 100%);
+    box-shadow: 0 4px 15px rgba(37, 53, 101, 0.3);
+  }
+
+  .btn.secondary:hover {
+    box-shadow: 0 6px 25px rgba(37, 53, 101, 0.5);
+  }
+
+  /* Modern input field */
+  .field {
+    @apply flex flex-col gap-2;
+  }
+
+  .field label {
+    @apply text-gray-400 text-sm font-medium;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    @apply px-4 py-3 rounded-xl border-2;
+    background: rgba(14, 22, 48, 0.8);
+    border-color: rgba(42, 53, 95, 0.5);
+    color: #e9eefb;
+    transition: all 0.3s ease;
+  }
+
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    @apply border-primary;
+    box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.1);
+    background: rgba(14, 22, 48, 1);
+  }
+
+  /* Badge */
+  .badge {
+    @apply rounded-full px-4 py-1.5 text-xs font-medium;
+    background: #253565;
+    color: #8fa2d6;
+    border: 1px solid rgba(143, 162, 214, 0.2);
+    display: inline-block;
+  }
+
+  .badge.highlight {
+    @apply text-white;
+    background: linear-gradient(135deg, #4f6ef7 0%, #a44fff 100%);
+  }
+
+  /* Container */
+  .container {
+    @apply max-w-7xl mx-auto px-6 py-8;
+  }
+
+  /* Grid layouts */
+  .grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .grid-2 {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+  }
+
+  /* Loader spinner */
+  .loader {
+    border: 3px solid rgba(79, 110, 247, 0.2);
+    border-radius: 50%;
+    border-top: 3px solid #4f6ef7;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Hero gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #4f6ef7 0%, #a44fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    @apply w-full h-2 rounded-full overflow-hidden;
+    background: #253565;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500;
+    background: linear-gradient(90deg, #4f6ef7 0%, #a44fff 100%);
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(79, 110, 247, 0.2);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4f6ef7 0%, #a44fff 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5f7eff 0%, #b45fff 100%);
+}
