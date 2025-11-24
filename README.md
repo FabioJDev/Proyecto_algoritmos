@@ -1,5 +1,9 @@
 # SmartMarket
 
+Figma: https://www.figma.com/design/JotL8xnG84iLc8DCIasyQZ/Untitled?node-id=0-1&t=2GhK0ob2orsOcujZ-1
+
+Hosting firebase : https://smartmarket-dev-fd27e.web.app/           // si sale la pantalla en blanco recargar la pagina
+
 SmartMarket es una plataforma de subastas moderna e interactiva diseñada para facilitar la compra y venta de productos a través de un sistema de pujas en tiempo real.
 
 ## 🚀 Características
@@ -76,9 +80,4 @@ src/
 └── utils/        # Funciones de utilidad
 ```
 
-## 🤝 Contribución
-
-¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, por favor abre un *issue* o envía un *pull request*.
-
----
 Desarrollado para la asignatura de Estructuras de Datos.
