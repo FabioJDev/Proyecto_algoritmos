@@ -1,8 +1,8 @@
 # SmartMarket
 
-Estudiantes:
-Fabio Jordan Cañaveral - 2230140
-Juan David Morales Velandia - 2230123
+#Estudiantes:
+#Fabio Jordan Cañaveral - 2230140
+#Juan David Morales Velandia - 2230123
 
 Figma: https://www.figma.com/design/JotL8xnG84iLc8DCIasyQZ/Untitled?node-id=0-1&t=2GhK0ob2orsOcujZ-1
 
